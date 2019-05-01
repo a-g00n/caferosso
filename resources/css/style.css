@@ -38,27 +38,46 @@ h3{
 	align-items: flex-end;
 	height: 50px;
 	width: 50px;
-	
 }
 
 .rosso{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	color: #bd1e1e;
 }
 
-.food-menu{
+.search-container{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin: 10px;
+}
+
+.search-text{
 	font-family: Helvetica;
-	font-weight: bold;
-	font-size: 4vw;
+	font-size: 1.32vw;
+	padding: 10px;
+	background-color: #edf2f4;
+}
+
+.footer-container{
+	background: #8d99ae;
+	height: 69px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	bottom: 0;
+	position: fixed;
 }
 
 .footer{
-	position: fixed;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
 
+.gallery-img{
+	height: 15vw;
 }
 
