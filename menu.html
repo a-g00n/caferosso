@@ -2,18 +2,76 @@
 <html>
 <head>
 	<title>Cafe Rosso Menu</title>
-	<link rel="stylesheet" type="text/css" href="./resources/css/style.css">
+	<link rel="stylesheet" type="text/css" href="./resources/css/style_m.css">
 </head>
 <body class="background">
 	<div class="container">
 		<div class="top">
-				<a href="index.html" style="text-decoration: none;"><span class="cafe-title">CAFE ROSSO</span></a>
-					<span class="top-button"><a href="menu.html" style=" text-decoration: none; color:#edf2f4">MENU</a></span> 
+				<a href="./index.html" style="text-decoration: none; padding: 2vw;"><span class="cafe-title">CAFE ROSSO</span></a>
+					<span class="top-button"><a href="menu.html" style=" text-decoration: none; color:#edf2f4; padding: 2vw;">MENU</a></span> 
 					<input class="searchbar" type=“text” placeholder=Search...>
-					<img class="top-icon" src="./resources/images/icon-profile.svg">
-					<img class="top-icon" src="./resources/images/icon-cart.svg">
+
+			<div class="dropdown2"><!--  profile -->
+					<button class="dropbtn2" onclick="myFunction2()">
+					<img class="top-icon" src="./resources/images/icon-profile.svg" style="padding: 2vw;">
+					<i class="fa fa-caret-down2"></i>
+					</button>
+				<div class="dropdown-content2" id="myDropdown2">
+						<h2>Jane Doe</h2>
+						<p style="font-family: Avenir; font-size: 2vw;" class="account-button">Favorites</p>
+						<p style="font-family: Avenir; font-size: 2vw;" class="account-button">Previous Purchases</p>
+						<p style="font-family: Avenir; font-size: 2vw;" class="account-button">Payment Method</p>
+						<p style="font-family: Avenir; font-size: 2vw;" class="account-button">Sign Out</p>
+						<script>
+						function myFunction2() {
+						  document.getElementById("myDropdown2").classList.toggle("show");
+						}
+
+						window.onclick = function(e) {
+						  if (!e.target.matches('.dropbtn')) {
+						  var myDropdown = document.getElementById("myDropdown2");
+						    if (myDropdown.classList.contains('show')) {
+						      myDropdown.classList.remove('show');
+						    }
+						  }
+						}
+						</script>
+				</div>
+			</div> 
+
+
+			<div class="dropdown"> <!-- cart -->
+					<button class="dropbtn" onclick="myFunction()">
+					<img class="top-icon dropbtn" onclick="dropdown" src="./resources/images/icon-cart.svg">
+					<i class="fa fa-caret-down"></i>
+					</button>
+				<div class="dropdown-content" id="myDropdown">
+					<img class="cart-img" src="./resources/images/BrkBag-sp-01.jpg">
+					<a style="font-family: Avenir; font-size: 2vw;">Sprout Bagel</a>
+					<a style="font-family: Avenir; font-size: 2vw;">Bacon</a>
+					<a style="font-family: Avenir; font-size: 2vw;">Pepperjack</a>
+					<a style="font-family: Avenir; font-size: 2vw;">Mayo</a>
+					<h2>Total: $5.50</h2>
+					<a href="#"><h3 class="checkout" style= "text-decoration: none; font-family: Avenir; font-size: 3vw;">Checkout</h3></a>
+						<script>
+						function myFunction() {
+						  document.getElementById("myDropdown").classList.toggle("show");
+						}
+
+						window.onclick = function(e) {
+						  if (!e.target.matches('.dropbtn')) {
+						  var myDropdown = document.getElementById("myDropdown");
+						    if (myDropdown.classList.contains('show')) {
+						      myDropdown.classList.remove('show');
+						    }
+						  }
+						}
+						</script>
+				</div>
+			</div> 
 		</div>
 	</div>
+
 
 	<div>
 		<a style="margin-top: 9vw; display: inline-block;" class="menu-titles">Breakfast</a>
@@ -88,6 +146,9 @@
 		</div>
 
 		<div class="bottom">
+            <span class="footer">OPEN</span>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d50491.50935160606!2d-122.50694092877198!3d37.72626530997066!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe5d876e1cf3b2686!2sCafe+Rosso!5e0!3m2!1sen!2sus!4v1558057436577!5m2!1sen!2sus" width="50" height="50" frameborder="0" style="border:1" allowfullscreen></iframe>
+			<img class="arrow" src="./resources/images/">
 		<div>
 
 	</div>
@@ -96,7 +157,7 @@
 </body>
 </html>
 
-<!-- separate each img w/ their own div. each div has class = zoom, this fixes cut off from scrolling -->
+<!-- separate each img w/ their own div. each div has class = zoom, this fixes cut off from scrolling --> 
 
 <!-- <div class="zoom"><img src="./resources/images/" class="image-cropper inline"></div> -->
 <!-- If you want the menu item scroll to not pop out, but will be slightly cut off, in style.css replace "transform: scale(1.2);" in the ".zoom:hover". Conversely, you can use:
