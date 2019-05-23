@@ -47,11 +47,6 @@ h2{
   margin: 0;
 }
 
-.top a:hover, .dropdown2:hover .dropbtn2, .dropbtn2:focus {
-  background-color: #ef233c;
-  padding: 1vw;
-}
-
 .dropdown-content2 {
   display: none;
   position: absolute;
@@ -126,10 +121,6 @@ h2{
   margin: 0;
 }
 
-.top a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
-  background-color: #ef233c;
-  padding: 1vw;
-}
 
 .dropdown-content {
   display: none;
