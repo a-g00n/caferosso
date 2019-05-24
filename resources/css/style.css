@@ -4,7 +4,10 @@ body{
 
 h1{
 	font-family: Impact;
-	font-size: 5.56vw;
+	font-size: 5.56vmax;
+/*    position: fixed;*/
+    top: 5vmax;
+    margin-top: 10vmax;
 }
 
 h2{
@@ -22,24 +25,26 @@ p{
 }
 
 .menu{
-	background: #8d99ae;
+	background: #bd1e1e;
 	height: 69px;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
 	flex-flow: row nowrap;
+    position: fixed;
+    width: 100%;
 }
 
 @media only screen and (max-width: 600px) {
     .menu-button {
-        background-color: orange;
+/*        background-color: orange;*/
     }
 }
 .menu-button{
 	color: #edf2f4;
 	padding: 5px;
 	font-family: Helvetica;
-	font-size: 1.32vw;
+	font-size: calc(1vmax + 1px);
 }
 
 .menu-icon{
@@ -73,7 +78,7 @@ p{
   border: 1px solid black;
   border-radius: 5px;
   margin-bottom: 3vw;
-  font-size: 17px;
+  font-size: 1.5vw;
 }
 
 .search-text{
@@ -85,8 +90,30 @@ p{
 }
 
 .gallery-img{
-	height: 15vw;
-	padding: 5px;
+	height: calc(20vw + 15px);
+	padding: calc(2vw + 0px);
+    border-radius: 10%;
+    padding-top: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+    .gallery{ 
+/*        display: flex;*/
+        flex-direction: column;
+        display: inline-block;
+    }
+    .gallery-img {
+        height: 26vmax;
+    }
+    h1 {
+        font-size: 8vmax;
+    }
+    .search-container input[type=text] {
+        font-size: 2vmax;
+        h1 {
+            
+        }
+    }
 }
 
 .gallery{
@@ -96,7 +123,7 @@ p{
 }
 
 .footer-container{
-	background: #8d99ae;
+	background: #277E42;
 	height: 69px;
 	width: 100%;
 	display: flex;
